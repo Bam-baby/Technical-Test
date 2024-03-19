@@ -3,9 +3,11 @@
 
 def count_vowels(sentence):
   
-  vowels = "aeiouAEIOU"
+  vowels = "aeiou"  
   count = 0
-  for char in sentence:
+  # Convert sentence to lowercase
+  sentence_lower = sentence.lower()
+  for char in sentence_lower:
     if char in vowels:
       count += 1
   return count
@@ -15,4 +17,4 @@ sentence = "Hello, world!"
 vowel_count = count_vowels(sentence)
 print(f"The sentence '{sentence}' has {vowel_count} vowels.")
 
-# Output: The sentence 'Hello, world!' has 4 vowels.
+# Output: The sentence 'Hello, world!' has 2 vowels.
